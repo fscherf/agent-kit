@@ -1,4 +1,22 @@
 services:
+  ollama:
+    image: ollama/ollama
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+    volumes:
+      - ./:/app
+      - ./data/ollama:/root/.ollama
+
+    ports:
+      - 11434:11434
+
   python:
     build:
       context: .
