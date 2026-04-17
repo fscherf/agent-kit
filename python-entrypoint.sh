@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-PYTHON=python3.14
-PYTHON_VENV="/app/data/python/$PYTHON.venv"
+export PYTHON=python3.14
+export PYTHON_VENV="/app/data/python/$PYTHON.venv"
 
 if ! [ -d "$(dirname $PYTHON_VENV)" ]; then
     mkdir -p $(dirname $PYTHON_VENV)
@@ -13,8 +13,6 @@ if ! [ -d "$PYTHON_VENV" ]; then
 	source $PYTHON_VENV/bin/activate && \
 	pip install pip --upgrade && \
 	pip install -e .
-else
-	source $PYTHON_VENV/bin/activate
 fi
 
-exec /bin/bash
+exec /bin/bash --rcfile /app/bash/.bashrc
