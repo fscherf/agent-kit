@@ -52,7 +52,7 @@ ollama-bash:
 	$(call DOCKER_COMPOSE_RUN,--entrypoint bash,ollama)
 
 ollama-pull:
-	$(call DOCKER_COMPOSE_EXEC,ollama,/app/ollama-pull.sh)
+	$(call DOCKER_COMPOSE_EXEC,ollama,/app/ollama/pull.sh)
 
 # python
 python-shell:
