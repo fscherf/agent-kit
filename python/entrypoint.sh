@@ -15,4 +15,4 @@ if ! [ -d "$PYTHON_VENV" ]; then
 	pip install -e .
 fi
 
-exec /bin/bash --rcfile /app/bash/.bashrc
+exec /bin/bash --rcfile /app/python/.bashrc

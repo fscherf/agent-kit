@@ -21,8 +21,7 @@ services:
 
   python:
     build:
-      context: .
-      dockerfile: python.Dockerfile
+      context: ./python
 
     hostname: python
 
@@ -32,4 +31,4 @@ services:
 
     user: 1000:1000
     working_dir: /app
-    command: /app/python-entrypoint.sh
+    command: /app/python/entrypoint.sh
