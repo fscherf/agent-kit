@@ -28,6 +28,7 @@ services:
 
     volumes:
       - ./:/app
+      - ./data/python/home/:/home/ubuntu
 
     user: 1000:1000
     working_dir: /app
