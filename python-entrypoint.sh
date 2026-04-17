@@ -2,7 +2,11 @@
 set -e
 
 PYTHON=python3.14
-PYTHON_VENV=.venv
+PYTHON_VENV="/app/data/python/$PYTHON.venv"
+
+if ! [ -d "$(dirname $PYTHON_VENV)" ]; then
+    mkdir -p $(dirname $PYTHON_VENV)
+fi
 
 if ! [ -d "$PYTHON_VENV" ]; then
 	$PYTHON -m venv $PYTHON_VENV && \
