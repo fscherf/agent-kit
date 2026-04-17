@@ -19,6 +19,11 @@ services:
     ports:
       - 11434:11434
 
+    environment:             
+      - OLLAMA_NUM_GPU=1     
+      - OLLAMA_GPU_LAYERS=999
+      - OLLAMA_KEEP_ALIVE=-1 
+
   python:
     build:
       context: ./python
