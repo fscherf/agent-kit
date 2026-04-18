@@ -2,7 +2,7 @@
 set -e
 
 export PYTHON=python3.14
-export PYTHON_VENV="/app/data/python/$PYTHON.venv"
+export PYTHON_VENV="/app/data/python/venvs/$PYTHON"
 
 if ! [ -d "$(dirname $PYTHON_VENV)" ]; then
     mkdir -p $(dirname $PYTHON_VENV)
