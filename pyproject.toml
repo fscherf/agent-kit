@@ -19,12 +19,17 @@ license-files = ["LICENSE.txt"]
 dependencies = [
   "rich",
   "openai",
+  "ollama",
   "rlpython",
 ]
 
 
 [tool.setuptools]
 include-package-data = true
+
+script-files = [
+  "bin/agent",
+]
 
 [tool.setuptools_scm]
 version_file = "agent_kit/version.py"

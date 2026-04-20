@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+
+from agent_kit.cli import handle_cli
+
+handle_cli()
