@@ -5,6 +5,7 @@ import json
 import os
 
 from agent_kit.interfaces.base import Interface
+from agent_kit.terminal import color
 
 from agent_kit.types import (
     ThinkingStartEvent,
@@ -16,16 +17,6 @@ from agent_kit.types import (
     OutputTokenEvent,
     OutputMessageEvent,
 )
-
-
-def color(text, color_name):
-    color_code = {
-        "grey": "\033[90m",
-        "bold-red": "\033[1;91m",
-        "bold-green": "\033[1;32m",
-    }[color_name]
-
-    return f"{color_code}{text}\033[0m"
 
 
 class TextInterface(Interface):
