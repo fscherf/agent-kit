@@ -66,6 +66,11 @@ class TextInterface(Interface):
         self.write_history()
 
     def get_user_prompt(self, agent):
+
+        # one-shot (`--user-prompt`)
+        if self.user_prompt:
+            return self.user_prompt
+
         if not hasattr(self, "history"):
             self.read_history()
 
